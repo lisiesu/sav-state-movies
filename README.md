@@ -1,6 +1,6 @@
 ### Objective
 
-Your assignment is to implement a movie streaming dashboard using TypeScript and React.
+Your assignment is to implement a movie streaming dashboard using **TypeScript** and **React**.
 
 ### Brief
 
@@ -16,7 +16,7 @@ You are the owner of a movie theater in **Crypto City**. Your customers are bore
 -   For authentication pass the `"Authorization: Bearer savstate2021"` header
 -   Parse the API response and display the results as outlined in the design. **Make sure to group movies by categories**.
 -   Implement a detail view for the movies in the list
--   Make sure that inking to detail pages as well as bookmarking works as expected
+-   Make sure that linking to detail pages as well as bookmarking works as expected
 -   Implement search by connecting to `https://sav.state/movies?q=<search_term>`
 
 The URL `https://sav.state/movies` is obviously made up. However the JSON payload is in [*movies.json*](./movies.json). 
@@ -26,11 +26,10 @@ Make sure to include all source code in a GitHub repository and let us know the 
 
 ### Evaluation Criteria
 
--   Use **React**
--   **TypeScript** best practices
--   Completeness: did you complete the features?
+-   Use **React** and follow **TypeScript** best practices;
+-   Completeness: have you completed all the features?
 -   Correctness: does the functionality act in sensible, thought-out ways?
--   Maintainability: is it written in a clean, maintainable way?
+-   Maintainability: is the code written (and project structured) in a clean, maintainable way?
 -   Testing: is the system adequately tested?
 -   (Bonus point) See if you could come up with a good integration test setup to emulate real API calls.
 
