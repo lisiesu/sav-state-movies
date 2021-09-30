@@ -6,7 +6,11 @@ You are expected to spend at most 3 hours.
 
 ### Brief
 
-You are the owner of a movie theater in **Crypto City**. Your customers are bored with the never changing selection and are asking for something completely different - they want to see what's playing on **Sav State**. You quickly scribble down some notes and after a few hours of relentless work you have a design in mind.
+You are the owner of a movie theater in **Crypto City**. Your customers are bored with the never changing selection of movies and are 
+ asking for something completely different. So you've decided to open a dedicated area for watching TV shows on the big screen at **Sav State**. 
+ However, you need a way of surfacing available TV shows to customers. 
+
+You quickly scribble down some notes and after a few hours of relentless work you have a design in mind.
 
 ### Tasks
 
@@ -14,12 +18,14 @@ You are the owner of a movie theater in **Crypto City**. Your customers are bore
     -   Language: **TypeScript**
     -   Framework: **React**
 -   Build out the project to the mockups inside the [*mockups*](./mockups) folder
--   Connect your application to the **Sav State Movies API** at `https://sav.state/movies`
--   For authentication pass the `"Authorization: Bearer savstate2021"` header
--   Make sure that linking to detail pages as well as bookmarking works as expected
--   Implement search by connecting to `https://sav.state/movies?q=<search_term>`
+-   Connect your application to the **TVMaze API** (Documentation: [https://www.tvmaze.com/api](https://www.tvmaze.com/api))
+-   Make sure that when interacting with the search functionality:
+    -   The search query is persisted in the URL, if you reload the page it will search with the same query
+    -   Navigating to a show updates the URL, if you reload the page it will load the same movie
+-   Implement search by using the show search endpoint
+-   On initial load when there is nothing to query, use the schedule (not the web/streaming schedule endpoint) endpoint to display 
+        a list of shows with episodes premiering today, scope it to the uk and use current date. 
 
-The URL `https://sav.state/movies` is obviously made up. However the JSON payload is in [*movies.json*](./movies.json). 
 ### Deliverables
 
 Make sure to include all source code and documentation in a GitHub repository and let us know the URL.
@@ -35,8 +41,8 @@ Make sure to include all source code and documentation in a GitHub repository an
 
 We're looking for you to produce working code, with enough room to demonstrate how to structure components in a small program.
 
-Please organize, design, test and document your code as if it were
-going into production - then push your changes to the main branch of the GitHub repository of your choosing.
+Please organize, design, test and document your code as if it were going into production - then push your changes to the main 
+ branch of the GitHub repository of your choosing.
 
 Good luck and happy coding,
 
