@@ -81,3 +81,12 @@ img {
 .info p {
   margin: 1rem 0;
 }
+
+.seasons {
+  display:flex;
+  margin: 2rem 0;
+}
+
+.seasons > img {
+margin-right: 2rem;
+}

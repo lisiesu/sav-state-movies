@@ -1,6 +1,7 @@
 import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ShowsContext from "../context/context";
+import Season from "./Season";
 
 function Show() {
   const { getSingleShow, singleShow } = useContext(ShowsContext);
@@ -49,6 +50,7 @@ function Show() {
           </p>
         </div>
       </div>
+      <Season />
     </div>
   );
 }
