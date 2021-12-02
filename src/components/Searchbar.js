@@ -1,8 +1,10 @@
-import { useState} from "react";
-
+import { useState, useContext } from "react";
+import ShowsContext from '../context/context'
 
 function Searchbar() {
   const [query, setQuery] = useState("");
+  const {searchShows} = useContext(ShowsContext);
+
 
   function changeHandler(event) {
     let value = event.target.value;
@@ -11,6 +13,7 @@ function Searchbar() {
 
   function submitHandler(event) {
     event.preventDefault();
+    searchShows(query);
   }
 
   return (
