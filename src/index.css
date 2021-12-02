@@ -11,6 +11,12 @@ body {
  
 } 
 
+img {
+  width: 210px;
+  height: 295px;
+  object-fit: cover;
+}
+
 .container {
   max-width: 1170px;
   margin: auto;
@@ -52,3 +58,22 @@ body {
   cursor: pointer;
 }
 
+.listitem {
+  /* width: 210px; */
+  margin: 12px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.listitem:hover {
+  transform: scale(1.05);
+}
+
+.show {
+  display:flex;
+  margin: 2rem 0;
+}
+
+.show > img {
+  margin-right: 2rem;
+}
