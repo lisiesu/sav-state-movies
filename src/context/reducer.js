@@ -1,4 +1,4 @@
-import { SEARCH_SHOWS, SET_SHOW, CLEAR_SHOW, SET_SCHEDULE, SET_SEASON } from "./types";
+import { SEARCH_SHOWS, SET_SHOW, CLEAR_SHOW, SET_SCHEDULE, SET_SEASON, SET_EPISODE } from "./types";
 
 function showsReducer(state, action) {
   switch (action.type) {
@@ -27,6 +27,11 @@ function showsReducer(state, action) {
         ...state,
         seasons: action.payload,
       };
+      case SET_EPISODE:
+        return {
+          ...state,
+          episode: action.payload,
+        };
 
     default:
       return state;

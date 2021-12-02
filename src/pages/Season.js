@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import ShowsContext from "../context/context";
 
 function Season() {
-  const { getSeason, seasons } = useContext(ShowsContext);
+  const { getSeason, seasons, episode, getEpisodes } = useContext(ShowsContext);
   const { id } = useParams();
-  
+
   useEffect(() => {
     getSeason(id);
   }, []);
 
-  return (
+   return (
     <div>
       <div>
         {seasons.map((season) => (

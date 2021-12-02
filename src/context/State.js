@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import axios from 'axios';
 import ShowsContext from "./context";
 import ShowsReducer from "./reducer";
-import { SEARCH_SHOWS, SET_SHOW, CLEAR_SHOW, SET_SCHEDULE, SET_SEASON } from "./types";
+import { SEARCH_SHOWS, SET_SHOW, CLEAR_SHOW, SET_SCHEDULE, SET_SEASON, SET_EPISODE } from "./types";
 
 function State(props) {
     const initialState = {
@@ -10,6 +10,7 @@ function State(props) {
         singleShow: {},
         schedule:[],
         seasons:[],
+        episode:[],
       }
 
 const [state, dispatch] = useReducer(ShowsReducer, initialState)
@@ -56,6 +57,15 @@ async function getSeason(id){
     });
 }
 
+async function getEpisodes(season) {
+    const {data} = await axios.get(`https://api.tvmaze.com/seasons/${season}/episodes`)
+    console.log('episodes', data)
+    dispatch({
+        type: SET_EPISODE,
+        payload:data,
+    })
+}
+
   return (
     <ShowsContext.Provider 
     value={{
@@ -63,11 +73,13 @@ async function getSeason(id){
         singleShow: state.singleShow,
         schedule: state.schedule,
         seasons: state.seasons,
+        episode: state.episode,
         searchShows,
         getSingleShow,
         clearShow,
         getSchedule,
         getSeason,
+        getEpisodes,
       
     }}>
     {props.children}
