@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding :0;
+  text-decoration: none;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color:blanchedalmond;
+ 
+} 
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+
+}
+
+.navbar {
+  padding: 1rem;
+  
+}
+
+.navbar__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__nav a {
+  color:blanchedalmond;
+}
+
+
+.searchbar {
+  /* width: 60%; */
+  margin: 2rem 0;
+}
+
+.searchbar__form input{
+  /* width: 60%; */
+  padding: 10px 17px;
+  border: 1px solid grey;
+  font-size: 20px;
+}
+
+.btn {
+  padding: 10px 17px;
+  border: 1px solid grey;
+  font-size: 17px;
+  cursor: pointer;
+}
+
